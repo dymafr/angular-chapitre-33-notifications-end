@@ -28,7 +28,7 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(APP_ROUTING),
+    RouterModule.forRoot(APP_ROUTING, { relativeLinkResolution: 'legacy' }),
     StoreModule.forRoot(reducersMap),
     EffectsModule.forRoot([AuthEffects]),
     StoreDevtoolsModule.instrument({
